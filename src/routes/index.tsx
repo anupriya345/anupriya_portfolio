@@ -4,6 +4,7 @@ import { Navbar } from "@/components/portfolio/Navbar";
 import { Hero } from "@/components/portfolio/Hero";
 import { About, Education, Experience, Services, Skills, Stats } from "@/components/portfolio/Sections";
 import { Projects } from "@/components/portfolio/Projects";
+import { CtaBand, Process } from "@/components/portfolio/Extras";
 import {
   Achievements,
   CareerGoal,
@@ -69,7 +70,9 @@ function Index() {
         <Experience />
         <Skills />
         <Services />
+        <Process />
         <Projects />
+        <CtaBand />
         <Achievements />
         <TechCloud />
         <WhyWorkWithMe />
