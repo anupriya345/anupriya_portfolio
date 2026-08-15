@@ -1,24 +1,83 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Toaster } from "@/components/ui/sonner";
+import { Navbar } from "@/components/portfolio/Navbar";
+import { Hero } from "@/components/portfolio/Hero";
+import { About, Education, Experience, Services, Skills, Stats } from "@/components/portfolio/Sections";
+import { Projects } from "@/components/portfolio/Projects";
+import {
+  Achievements,
+  CareerGoal,
+  Contact,
+  Footer,
+  TechCloud,
+  WhyWorkWithMe,
+} from "@/components/portfolio/Closing";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const TITLE = "Anupriya Singh | Software Developer & Data Science Enthusiast";
+const DESCRIPTION =
+  "Portfolio of Anupriya Singh, a final-year Computer Science & Engineering student specializing in software development, MERN stack, data science, AI/ML, and data visualization.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:type", content: "profile" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Anupriya Singh",
+          jobTitle: "Software Developer & Data Science Enthusiast",
+          email: "mailto:singhanupriya991979@gmail.com",
+          telephone: "+91 9919797257",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Kushinagar",
+            addressRegion: "Uttar Pradesh",
+            addressCountry: "IN",
+          },
+          alumniOf: "Buddha Institute of Technology",
+          sameAs: [
+            "https://www.linkedin.com/in/anupriya-singh234",
+            "https://github.com/anupriya345",
+          ],
+        }),
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <main>
+        <Hero />
+        <Stats />
+        <About />
+        <Education />
+        <Experience />
+        <Skills />
+        <Services />
+        <Projects />
+        <Achievements />
+        <TechCloud />
+        <WhyWorkWithMe />
+        <CareerGoal />
+        <Contact />
+      </main>
+      <Footer />
+      <Toaster />
     </div>
   );
 }
