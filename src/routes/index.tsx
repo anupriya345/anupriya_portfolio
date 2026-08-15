@@ -70,7 +70,9 @@ function Index() {
         <Experience />
         <Skills />
         <Services />
+        <Process />
         <Projects />
+        <CtaBand />
         <Achievements />
         <TechCloud />
         <WhyWorkWithMe />
