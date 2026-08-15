@@ -228,7 +228,7 @@ export function Experience() {
   );
 }
 
-const SKILL_ICONS = [Code2, LineChart, Layers, Database, Wrench, Users];
+const SKILL_ICONS = [Code2, LineChart, Layers, Database, Wrench, Users] as const;
 
 export function Skills() {
   return (
@@ -241,7 +241,7 @@ export function Skills() {
 
       <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {SKILLS.map((group, i) => {
-          const Icon = SKILL_ICONS[i % SKILL_ICONS.length];
+          const Icon = SKILL_ICONS[i % SKILL_ICONS.length]!;
           return (
             <Reveal key={group.title} delay={i * 70}>
               <div className="glass glass-hover h-full rounded-3xl p-6">
@@ -296,7 +296,7 @@ function ProficiencyBar({ name, level, value }: { name: string; level: string; v
   );
 }
 
-const SERVICE_ICONS = [Code2, Server, BarChart3, Brain, LineChart, Plug];
+const SERVICE_ICONS = [Code2, Server, BarChart3, Brain, LineChart, Plug] as const;
 
 export function Services() {
   return (
@@ -308,7 +308,7 @@ export function Services() {
       />
       <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((s, i) => {
-          const Icon = SERVICE_ICONS[i % SERVICE_ICONS.length];
+          const Icon = SERVICE_ICONS[i % SERVICE_ICONS.length]!;
           return (
             <Reveal key={s.no} delay={i * 70}>
               <article className="glass glass-hover group h-full rounded-3xl p-7">
