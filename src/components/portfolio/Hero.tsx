@@ -1,5 +1,5 @@
 import { ArrowRight, Download, Github, Linkedin, Mail, MousePointerClick, Sparkles } from "lucide-react";
-import profileImg from "@/assets/profile-placeholder.jpg";
+import profileImg from "@/assets/profile-anu.jpg";
 import { CONTACT } from "./data";
 
 const BADGES = [
@@ -132,9 +132,9 @@ export function Hero() {
             <div className="relative size-full overflow-hidden rounded-[calc(2rem-2px)] bg-surface">
               <img
                 src={profileImg}
-                width={800}
+                width={600}
                 height={800}
-                alt="Placeholder for the professional headshot of Anupriya Singh"
+                alt="Professional headshot of Anupriya Singh"
                 className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div
@@ -146,9 +146,6 @@ export function Hero() {
                 }}
               />
             </div>
-            <span className="absolute inset-x-0 bottom-3 mx-auto w-fit rounded-full bg-background/80 px-3 py-1 text-[10px] tracking-wide text-muted-foreground uppercase backdrop-blur">
-              Photo placeholder — upload real headshot
-            </span>
           </div>
 
           {BADGES.map((b) => (
