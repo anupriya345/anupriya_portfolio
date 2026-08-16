@@ -3,6 +3,7 @@ import shellImg from "@/assets/project-shell.jpg";
 import newsImg from "@/assets/project-news.jpg";
 import vizImg from "@/assets/project-viz.jpg";
 import carImg from "@/assets/project-car.jpg";
+import unemploymentImg from "@/assets/project-unemployment.jpg";
 import ecomImg from "@/assets/project-ecommerce.jpg";
 
 export const NAV_LINKS = [
@@ -26,7 +27,7 @@ export const CONTACT = {
 };
 
 export const STATS = [
-  { value: 6, suffix: "+", label: "Projects" },
+  { value: 7, suffix: "+", label: "Projects" },
   { value: 4, suffix: "", label: "Internship Experiences" },
   { value: null, display: "SIH", label: "Hackathon Finalist" },
   { value: null, display: "1st", label: "Coding Competition Winner" },
@@ -236,6 +237,23 @@ export const PROJECTS: Project[] = [
     tags: ["Python", "Pandas", "NumPy", "Machine Learning"],
     categories: ["AI / ML", "Data Science"],
     image: carImg,
+  },
+  {
+    id: "unemployment",
+    no: "07",
+    title: "Unemployment Analysis",
+    description:
+      "A data analysis project that explores unemployment trends, identifies patterns across regions and time periods, and presents actionable insights through visualizations.",
+    highlights: [
+      "Data cleaning & preprocessing",
+      "Trend & pattern analysis",
+      "Region-wise unemployment insights",
+      "Interactive visualizations",
+      "Data-driven storytelling",
+    ],
+    tags: ["Python", "Pandas", "Matplotlib", "Data Analysis"],
+    categories: ["Data Science", "Data Visualization"],
+    image: unemploymentImg,
   },
 ];
 
