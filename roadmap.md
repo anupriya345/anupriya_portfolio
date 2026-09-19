@@ -1,6 +1,6 @@
 # Portfolio enhancement roadmap
 
-- [ ] Replace the hero portrait with the newly provided image URL
+- [x] Replace the hero portrait with the newly provided image URL
 - [ ] Extend the AI-inspired visual system to About and Education
 - [ ] Refine Experience, Skills, and Services for clearer scanning
 - [ ] Modernize Process, Projects, Achievements, and technology sections
