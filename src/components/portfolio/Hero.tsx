@@ -10,7 +10,7 @@ import {
   MapPin,
   Sparkles,
 } from "lucide-react";
-import profileImg from "@/assets/profile-anu.jpg";
+import profileImg from "@/assets/Anupriya-image.jpg.asset.json";
 import { CONTACT } from "./data";
 
 const CAPABILITIES = ["AI / ML", "Data Science", "Full-stack"];
@@ -121,11 +121,11 @@ export function Hero() {
           <div className="relative aspect-square overflow-hidden rounded-2xl border border-primary/40 bg-surface p-2 shadow-[var(--shadow-portrait)]">
             <div className="relative size-full overflow-hidden rounded-xl bg-secondary">
               <img
-                src={profileImg}
+                src={profileImg.url}
                 width={800}
                 height={800}
                 alt="Anupriya Singh, software developer and data science enthusiast"
-                className="size-full object-cover object-top"
+                className="size-full object-cover object-center"
               />
               <div aria-hidden className="portrait-grid pointer-events-none absolute inset-0" />
               <div aria-hidden className="portrait-scan pointer-events-none absolute inset-x-0 top-0 h-px" />
