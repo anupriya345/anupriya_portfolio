@@ -5,6 +5,8 @@ import vizImg from "@/assets/project-viz.jpg";
 import carImg from "@/assets/project-car.jpg";
 import unemploymentImg from "@/assets/project-unemployment.jpg";
 import ecomImg from "@/assets/project-ecommerce.jpg";
+import trafficImg from "@/assets/project-traffic-ai.jpg";
+import careerCoachImg from "@/assets/project-career-coach.jpg";
 
 export const NAV_LINKS = [
   { label: "Home", href: "#home" },
@@ -12,9 +14,8 @@ export const NAV_LINKS = [
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
-  { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
-  { label: "Achievements", href: "#achievements" },
+  { label: "Learning", href: "#learning" },
+  { label: "Hackathons", href: "#hackathons" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -27,7 +28,7 @@ export const CONTACT = {
 };
 
 export const STATS = [
-  { value: 7, suffix: "+", label: "Projects" },
+  { value: 9, suffix: "+", label: "Projects" },
   { value: 4, suffix: "", label: "Internship Experiences" },
   { value: null, display: "SIH", label: "Hackathon Finalist" },
   { value: null, display: "1st", label: "Coding Competition Winner" },
@@ -85,18 +86,17 @@ export const SKILLS = [
   { title: "Programming Languages", items: ["Python", "C++", "JavaScript", "Shell Scripting"] },
   {
     title: "Data Science & Analytics",
-    items: ["Pandas", "NumPy", "Matplotlib", "Power BI", "Tableau", "Excel"],
+    items: ["Pandas", "NumPy", "Matplotlib", "SQL", "Power BI", "Tableau", "Excel"],
   },
   {
-    title: "Web Technologies",
-    items: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express.js", "REST APIs"],
+    title: "AI / ML / Computer Vision",
+    items: ["Machine Learning", "Deep Learning", "NLP", "OpenCV", "YOLO", "Face Recognition"],
   },
-  { title: "Databases", items: ["MongoDB", "SQL"] },
-  { title: "Tools", items: ["Git", "GitHub", "VS Code", "Jupyter Notebook"] },
   {
-    title: "Soft Skills",
-    items: ["Leadership", "Communication", "Time Management", "Event Management"],
+    title: "Full-Stack Development",
+    items: ["HTML", "CSS", "JavaScript", "React.js", "Node.js", "Express.js", "REST APIs", "MongoDB"],
   },
+  { title: "Tools", items: ["Git", "GitHub", "VS Code", "Jupyter Notebook", "Streamlit", "FastAPI"] },
 ];
 
 export const PROFICIENCY = [
@@ -141,11 +141,11 @@ export const SERVICES = [
 
 export const PROJECT_FILTERS = [
   "All",
-  "Web Development",
+  "Software Development",
+  "Full Stack",
   "Data Science",
-  "AI / ML",
-  "Data Visualization",
-  "Automation",
+  "AI/ML",
+  "Computer Vision",
 ] as const;
 
 export type Project = {
@@ -159,6 +159,8 @@ export type Project = {
   image: string;
   featured?: boolean;
   demo?: string;
+  github?: string;
+  impact?: string;
 };
 
 export const PROJECTS: Project[] = [
@@ -167,7 +169,7 @@ export const PROJECTS: Project[] = [
     no: "06",
     title: "PickNGo E-Commerce Website",
     description:
-      "A modern full-stack e-commerce web application featuring product browsing, authentication, cart management, checkout, address management, and order placement.",
+      "A full-stack e-commerce application with secure user flows, product discovery, cart management, checkout, and order placement.",
     highlights: [
       "Login / Signup",
       "Product management",
@@ -178,8 +180,8 @@ export const PROJECTS: Project[] = [
       "REST APIs",
       "MongoDB integration",
     ],
-    tags: ["React", "Node.js", "Express.js", "MongoDB", "REST API"],
-    categories: ["Web Development"],
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "REST API", "JavaScript"],
+    categories: ["Software Development", "Full Stack"],
     image: ecomImg,
     featured: true,
   },
@@ -188,10 +190,10 @@ export const PROJECTS: Project[] = [
     no: "01",
     title: "AI Face Recognition Attendance System",
     description:
-      "A smart attendance solution using face recognition technology to identify registered individuals and automate attendance recording.",
+      "A computer-vision attendance system that identifies registered individuals and automates attendance recording.",
     highlights: ["Face recognition", "Computer vision", "Automated attendance", "AI-based identification"],
-    tags: ["Python", "OpenCV", "AI/ML"],
-    categories: ["AI / ML", "Automation"],
+    tags: ["Python", "OpenCV", "Computer Vision", "Face Recognition"],
+    categories: ["AI/ML", "Computer Vision"],
     image: faceImg,
   },
   {
@@ -202,7 +204,7 @@ export const PROJECTS: Project[] = [
       "A command-line academic utility developed with Ubuntu shell scripting to automate GPA computation from student academic data.",
     highlights: ["Automation", "Shell scripting", "Linux / Ubuntu", "Academic data processing"],
     tags: ["Shell Scripting", "Ubuntu", "Linux"],
-    categories: ["Automation"],
+    categories: ["Software Development"],
     image: shellImg,
   },
   {
@@ -210,10 +212,10 @@ export const PROJECTS: Project[] = [
     no: "03",
     title: "Fake News Detection",
     description:
-      "A machine-learning project focused on identifying whether news content is likely to be genuine or fake using text classification.",
+      "A text-classification model that applies NLP and TF-IDF features to identify potentially misleading news content.",
     highlights: ["Data preprocessing", "Text classification", "Machine learning", "Prediction"],
-    tags: ["Python", "Pandas", "NumPy", "Machine Learning"],
-    categories: ["AI / ML", "Data Science"],
+    tags: ["Python", "NLP", "TF-IDF", "Machine Learning", "Jupyter Notebook"],
+    categories: ["AI/ML", "Data Science"],
     image: newsImg,
   },
   {
@@ -221,10 +223,10 @@ export const PROJECTS: Project[] = [
     no: "04",
     title: "Netflix Data Visualization",
     description:
-      "An analytical and visualization project exploring Netflix content data to identify trends, patterns, categories, and insights.",
+      "An exploratory analysis of Netflix content data, presenting clear trends, category patterns, and visual insights.",
     highlights: ["Exploratory data analysis", "Data visualization", "Trend analysis", "Data-driven insights"],
-    tags: ["Python", "Pandas", "Matplotlib", "Data Visualization"],
-    categories: ["Data Visualization", "Data Science"],
+    tags: ["Python", "Pandas", "NumPy", "Matplotlib", "Data Analysis"],
+    categories: ["Data Science"],
     image: vizImg,
   },
   {
@@ -232,10 +234,10 @@ export const PROJECTS: Project[] = [
     no: "05",
     title: "Car Price Prediction",
     description:
-      "A machine-learning project designed to predict car prices using relevant vehicle attributes and regression modelling.",
+      "A regression-based machine-learning project that estimates car prices from relevant vehicle attributes.",
     highlights: ["Data preprocessing", "Feature analysis", "Regression", "Prediction"],
-    tags: ["Python", "Pandas", "NumPy", "Machine Learning"],
-    categories: ["AI / ML", "Data Science"],
+    tags: ["Python", "Pandas", "NumPy", "Scikit-learn", "Machine Learning"],
+    categories: ["AI/ML", "Data Science"],
     image: carImg,
   },
   {
@@ -243,7 +245,7 @@ export const PROJECTS: Project[] = [
     no: "07",
     title: "Unemployment Analysis",
     description:
-      "A data analysis project that explores unemployment trends, identifies patterns across regions and time periods, and presents actionable insights through visualizations.",
+      "A data-analysis project exploring unemployment trends across regions and time periods through clear visualizations.",
     highlights: [
       "Data cleaning & preprocessing",
       "Trend & pattern analysis",
@@ -251,11 +253,75 @@ export const PROJECTS: Project[] = [
       "Interactive visualizations",
       "Data-driven storytelling",
     ],
-    tags: ["Python", "Pandas", "Matplotlib", "Data Analysis"],
-    categories: ["Data Science", "Data Visualization"],
+    tags: ["Python", "Pandas", "NumPy", "Matplotlib", "Data Analysis"],
+    categories: ["Data Science"],
     image: unemploymentImg,
   },
+  {
+    id: "traffic-ai",
+    no: "08",
+    title: "AI-Based Intelligent Traffic Management System",
+    description:
+      "An AI-powered system that analyzes traffic footage to estimate vehicle density, monitor flow, and support smarter signal management.",
+    highlights: [
+      "Real-time vehicle detection and monitoring",
+      "Traffic density estimation",
+      "Vehicle counting and flow analysis",
+      "Intelligent signal optimization concept",
+      "Congestion detection and monitoring",
+      "Data visualization dashboard",
+      "Smart-city and sustainable transport focus",
+    ],
+    tags: ["Python", "YOLO", "OpenCV", "Deep Learning", "Computer Vision", "Streamlit", "Pandas", "NumPy", "Plotly"],
+    categories: ["AI/ML", "Computer Vision", "Data Science"],
+    image: trafficImg,
+    impact:
+      "Demonstrates how AI and computer vision can support traffic monitoring, congestion reduction, and data-driven smart-city transportation.",
+    featured: true,
+  },
+  {
+    id: "career-coach",
+    no: "09",
+    title: "AI Career Coach Platform",
+    description:
+      "An AI-assisted platform concept designed to support career exploration, skill development, and practical career planning.",
+    highlights: ["AI-assisted career guidance", "Skill-focused recommendations", "Interactive user experience", "Practical career planning"],
+    tags: ["AI", "Python", "Streamlit", "Web Technologies"],
+    categories: ["AI/ML", "Software Development"],
+    image: careerCoachImg,
+  },
 ];
+
+export const WORKSHOPS = [
+  {
+    icon: "geospatial",
+    title: "AI/ML for Geodata Analytics",
+    provider: "Indian Institute of Remote Sensing (IIRS), ISRO",
+    meta: "03–14 August 2026 · 10 Hours",
+    description: "Completed technical learning focused on Artificial Intelligence and Machine Learning applications for geospatial data analytics.",
+  },
+  {
+    icon: "analysis",
+    title: "Data Analysis with Python",
+    provider: "Infosys Springboard",
+    description: "Completed training in Python-based data handling, analysis, visualization, and practical problem-solving.",
+  },
+  {
+    icon: "automation",
+    title: "NIELIT Workshop – RPA",
+    provider: "National Institute of Electronics & Information Technology (NIELIT)",
+    description: "Participated in a technical workshop focused on Robotic Process Automation and automation concepts.",
+  },
+] as const;
+
+export const LEARNING_HIGHLIGHTS = [
+  "Data Science Internship — EISYSTEM TECHNEX'25",
+  "Data Science Internship — CodeAlpha",
+  "Data Science Internship — EduSkill",
+  "MERN Stack Internship — IBM PEBL",
+  "Multiple technical workshops",
+  "Hackathons and technical competitions",
+] as const;
 
 export const ACHIEVEMENTS = [
   {
