@@ -13,10 +13,10 @@ import {
 import profileImg from "@/assets/Anupriya-image.jpg.asset.json";
 import { CONTACT } from "./data";
 
-const CAPABILITIES = ["AI / ML", "Data Science", "Full-stack"];
+const CAPABILITIES = ["Software Development", "Full Stack", "Data Science", "AI / ML"];
 
 const QUICK_STATS = [
-  { value: "07+", label: "Projects built" },
+  { value: "09+", label: "Projects built" },
   { value: "04", label: "Internships" },
   { value: "SIH", label: "Finalist" },
 ];
@@ -51,12 +51,11 @@ export function Hero() {
             Anupriya Singh
           </h1>
           <p className="mt-4 max-w-2xl font-display text-2xl leading-tight font-medium text-foreground/90 sm:text-3xl">
-            I build software that thinks with <span className="gradient-text">data &amp; AI.</span>
+            Computer Science Engineer <span className="gradient-text">| Software Developer | Data Science &amp; AI/ML Enthusiast</span>
           </p>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Final-year Computer Science engineer creating intelligent products—from machine-learning systems and
-            data experiences to modern full-stack applications.
+            Building practical solutions with full-stack development, data science, artificial intelligence, and machine learning.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2" aria-label="Core capabilities">

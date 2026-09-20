@@ -5,6 +5,7 @@ import { Hero } from "@/components/portfolio/Hero";
 import { About, Education, Experience, Services, Skills, Stats } from "@/components/portfolio/Sections";
 import { Projects } from "@/components/portfolio/Projects";
 import { CtaBand, Process } from "@/components/portfolio/Extras";
+import { ExperienceHighlights, Hackathons, Workshops } from "@/components/portfolio/Learning";
 import {
   Achievements,
   CareerGoal,
@@ -68,12 +69,15 @@ function Index() {
         <About />
         <Education />
         <Experience />
+        <ExperienceHighlights />
         <Skills />
         <Services />
         <Process />
         <Projects />
         <CtaBand />
         <Achievements />
+        <Workshops />
+        <Hackathons />
         <TechCloud />
         <WhyWorkWithMe />
         <CareerGoal />
