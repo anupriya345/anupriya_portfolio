@@ -137,19 +137,21 @@ const DETAILS = [
 export function Contact() {
   const [sending, setSending] = useState(false);
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
-    const data = new FormData(form);
     setSending(true);
-    const subject = encodeURIComponent(String(data.get("subject") || "Portfolio enquiry"));
-    const body = encodeURIComponent(
-      `Name: ${data.get("name")}\nEmail: ${data.get("email")}\n\n${data.get("message")}`,
-    );
-    window.location.href = `mailto:${CONTACT.email}?subject=${subject}&body=${body}`;
-    toast.success("Opening your email app to send the message.");
-    form.reset();
-    setSending(false);
+    try {
+      await emailjs.sendForm("service_0eooe8i", "template_6m4ctax", form, {
+        publicKey: "IffF2sjsPvYa-fZVN",
+      });
+      toast.success("Message sent! I'll get back to you soon.");
+      form.reset();
+    } catch {
+      toast.error("Couldn't send the message. Please try again or email me directly.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
