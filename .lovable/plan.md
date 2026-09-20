@@ -1,17 +1,24 @@
-# Continue the AI Portfolio Redesign
+# Expand the Existing Portfolio Content
 
 ## Goal
-Carry the new hero's precise, modern AI aesthetic through every remaining portfolio section while preserving all existing information and interactions.
+Preserve the current dark visual identity and interactions while making the portfolio more complete, concise, and recruiter-friendly.
 
 ## Changes
-- Replace oversized floating panels with cleaner bordered surfaces, structured grids, technical labels, and restrained blue/cyan accents.
-- Rework About and Education into a concise profile overview and academic timeline.
-- Improve Experience, Skills, Services, and Process with consistent numbering, icon treatments, hierarchy, and spacing.
-- Upgrade project filters, project cards, and details so the work becomes the visual focus.
-- Unify Achievements, technology, career goal, contact form, calls to action, and footer with the same visual language.
-- Preserve project filtering, detail dialogs, counters, contact behavior, links, and mobile navigation.
+- Refine the hero and About copy around software development, full-stack work, data science, AI/ML, and computer vision.
+- Add the AI traffic management and AI career coach projects without removing any existing work.
+- Standardize all project descriptions, technology tags, categories, and feature details; show repository or demo actions only when real links exist.
+- Replace the project filters with All, Software Development, Full Stack, Data Science, AI/ML, and Computer Vision.
+- Add Workshops & Technical Learning and Hackathons & Technical Competitions using the existing card and timeline language.
+- Add a compact Experience & Learning Highlights view while retaining the detailed experience section.
+- Update categorized skills with the exact technologies supplied and keep the groups compact.
+- Extend navigation to the new sections while preserving the existing contact form and all current functionality.
+
+## Technical Details
+- Keep portfolio content in reusable data structures and render the new sections from shared components.
+- Add cohesive local cover artwork for the two new projects without inventing links or facts.
+- Preserve the current responsive breakpoints, reveal motion, typography, colors, and accessibility patterns.
 
 ## Validation
-- Review the complete page at desktop and phone sizes.
-- Test project filtering and project details.
-- Confirm no horizontal overflow, console errors, or build errors.
+- Review desktop, tablet, and phone layouts for spacing, readability, and overflow.
+- Test every project filter, project details, navigation link, mobile menu, and contact form presentation.
+- Confirm there are no build, runtime, console, or accessibility regressions.
