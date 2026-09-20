@@ -12,6 +12,7 @@ import {
   Wrench,
   Users,
   LineChart,
+  ScanFace,
 } from "lucide-react";
 import { Reveal, useInView } from "./Reveal";
 import { EXPERIENCE, PROFICIENCY, SERVICES, SKILLS, STATS } from "./data";
@@ -85,11 +86,10 @@ export function Stats() {
 
 const FOCUS = [
   "Software Development",
+  "Full-Stack Development",
   "Data Science",
-  "Machine Learning & AI",
-  "MERN Stack Development",
-  "Data Visualization",
-  "Problem Solving",
+  "Artificial Intelligence & Machine Learning",
+  "Computer Vision",
 ];
 
 export function About() {
@@ -98,21 +98,19 @@ export function About() {
       <SectionHeading
         eyebrow="About"
         title="About Me"
-        subtitle="Curious about technology. Passionate about building solutions."
+        subtitle="Practical experience across software, data, and intelligent systems."
       />
 
       <div className="mt-12 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
         <Reveal className="glass rounded-3xl p-8">
           <p className="text-base leading-relaxed text-muted-foreground">
-            I&apos;m Anupriya Singh, a final-year B.Tech Computer Science &amp; Engineering student at Buddha
-            Institute of Technology, affiliated with Dr. APJ Abdul Kalam Technical University. My interests span
-            Software Development, Data Science, Artificial Intelligence, Machine Learning, Data Visualization,
-            and modern web technologies.
+            I&apos;m Anupriya Singh, a final-year B.Tech Computer Science &amp; Engineering student with hands-on
+            experience in software development, full-stack development, data science, artificial intelligence,
+            machine learning, and computer vision.
           </p>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            I enjoy working on practical projects that solve real-world problems. Through internships, coding
-            competitions, workshops, and project development, I have developed experience in both software
-            engineering and data-driven problem solving.
+            I have developed practical projects, participated in hackathons and technical competitions, attended
+            technical workshops, and gained internship and training experience across software and data-driven work.
           </p>
           <blockquote className="mt-7 rounded-2xl border-l-2 border-cyan bg-secondary/30 px-5 py-4 font-display text-lg text-foreground/90">
             “My goal is to grow as a software developer and data science professional while building technology
@@ -228,7 +226,7 @@ export function Experience() {
   );
 }
 
-const SKILL_ICONS = [Code2, LineChart, Layers, Database, Wrench, Users] as const;
+const SKILL_ICONS = [Code2, LineChart, ScanFace, Layers, Wrench] as const;
 
 export function Skills() {
   return (
@@ -241,7 +239,7 @@ export function Skills() {
 
       <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {SKILLS.map((group, i) => {
-          const Icon = SKILL_ICONS[i % SKILL_ICONS.length]!;
+          const Icon = SKILL_ICONS[i % SKILL_ICONS.length] ?? Code2;
           return (
             <Reveal key={group.title} delay={i * 70}>
               <div className="glass glass-hover h-full rounded-3xl p-6">

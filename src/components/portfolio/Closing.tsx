@@ -276,9 +276,7 @@ function Field({
 }
 
 export function Footer() {
-  const links = NAV_LINKS.filter((l) =>
-    ["Home", "About", "Skills", "Projects", "Services", "Contact"].includes(l.label),
-  );
+  const links = NAV_LINKS.filter((l) => ["Home", "About", "Skills", "Projects", "Learning", "Contact"].includes(l.label));
   return (
     <footer className="border-t border-border py-12">
       <div className="mx-auto grid max-w-7xl gap-8 px-5 lg:grid-cols-3 lg:px-8">
