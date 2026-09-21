@@ -10,4 +10,4 @@
 - [x] Add compact Experience & Learning Highlights
 - [x] Refresh categorized skills and navigation
 - [x] Add the uploaded résumé to prominent tracked download buttons in Hero and About
-- [ ] Validate desktop, tablet, and mobile layouts and interactions
+- [x] Validate desktop, tablet, and mobile layouts and interactions
