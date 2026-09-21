@@ -9,7 +9,7 @@ import {
   MapPin,
   Sparkles,
 } from "lucide-react";
-import profileImg from "@/assets/Anupriya-image.jpg.asset.json";
+import profileImg from "@/assets/Anuuuu-Image.jpg.asset.json";
 import { CONTACT } from "./data";
 import { ResumeLink } from "./ResumeLink";
 
