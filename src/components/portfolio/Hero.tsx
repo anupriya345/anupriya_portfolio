@@ -3,7 +3,6 @@ import {
   ArrowRight,
   BrainCircuit,
   Code2,
-  Download,
   Github,
   Linkedin,
   Mail,
@@ -12,6 +11,7 @@ import {
 } from "lucide-react";
 import profileImg from "@/assets/Anupriya-image.jpg.asset.json";
 import { CONTACT } from "./data";
+import { ResumeLink } from "./ResumeLink";
 
 const CAPABILITIES = ["Software Development", "Full Stack", "Data Science", "AI / ML"];
 
@@ -82,13 +82,10 @@ export function Hero() {
               Let&apos;s connect
               <ArrowDownRight className="size-4 text-cyan" />
             </a>
-            <a
-              href="#contact"
-              className="inline-flex min-h-12 items-center gap-2 px-2 text-sm text-muted-foreground transition-colors hover:text-cyan"
-            >
-              <Download className="size-4" />
-              Résumé
-            </a>
+            <ResumeLink
+              label="Download Résumé"
+              className="min-h-12 rounded-lg border border-cyan/35 bg-cyan/10 px-5 text-sm font-semibold text-foreground transition-colors hover:border-cyan hover:bg-cyan/15"
+            />
           </div>
 
           <div className="mt-9 flex flex-wrap items-center gap-4 border-t border-border/70 pt-6">

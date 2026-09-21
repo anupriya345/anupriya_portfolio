@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { Reveal, useInView } from "./Reveal";
 import { EXPERIENCE, PROFICIENCY, SERVICES, SKILLS, STATS } from "./data";
+import { ResumeLink } from "./ResumeLink";
 
 export function SectionHeading({
   eyebrow,
@@ -116,6 +117,9 @@ export function About() {
             “My goal is to grow as a software developer and data science professional while building technology
             that creates meaningful impact.”
           </blockquote>
+          <ResumeLink
+            className="mt-7 min-h-11 rounded-lg bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-[var(--glow-primary)] transition-transform hover:-translate-y-0.5"
+          />
         </Reveal>
 
         <Reveal delay={120} className="glass gradient-surface rounded-3xl p-8">
