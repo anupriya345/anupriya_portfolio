@@ -9,4 +9,5 @@
 - [ ] Add Hackathons & Technical Competitions
 - [ ] Add compact Experience & Learning Highlights
 - [ ] Refresh categorized skills and navigation
+- [ ] Add the uploaded résumé to prominent tracked download buttons in Hero and About
 - [ ] Validate desktop, tablet, and mobile layouts and interactions
