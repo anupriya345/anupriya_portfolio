@@ -16,7 +16,7 @@ import { ResumeLink } from "./ResumeLink";
 const CAPABILITIES = ["Software Development", "Full Stack", "Data Science", "AI / ML"];
 
 const QUICK_STATS = [
-  { value: "09+", label: "Projects built" },
+  { value: "08+", label: "Projects built" },
   { value: "04", label: "Internships" },
   { value: "SIH", label: "Finalist" },
 ];

@@ -6,7 +6,6 @@ import carImg from "@/assets/project-car.jpg";
 import unemploymentImg from "@/assets/project-unemployment.jpg";
 import ecomImg from "@/assets/project-ecommerce.jpg";
 import trafficImg from "@/assets/project-traffic-ai.jpg";
-import careerCoachImg from "@/assets/project-career-coach.jpg";
 
 export const NAV_LINKS = [
   { label: "Home", href: "#home" },
@@ -28,7 +27,7 @@ export const CONTACT = {
 };
 
 export const STATS = [
-  { value: 9, suffix: "+", label: "Projects" },
+  { value: 8, suffix: "+", label: "Projects" },
   { value: 4, suffix: "", label: "Internship Experiences" },
   { value: null, display: "SIH", label: "Hackathon Finalist" },
   { value: null, display: "1st", label: "Coding Competition Winner" },
@@ -278,17 +277,6 @@ export const PROJECTS: Project[] = [
     impact:
       "Demonstrates how AI and computer vision can support traffic monitoring, congestion reduction, and data-driven smart-city transportation.",
     featured: true,
-  },
-  {
-    id: "career-coach",
-    no: "09",
-    title: "AI Career Coach Platform",
-    description:
-      "An AI-assisted platform concept designed to support career exploration, skill development, and practical career planning.",
-    highlights: ["AI-assisted career guidance", "Skill-focused recommendations", "Interactive user experience", "Practical career planning"],
-    tags: ["AI", "Python", "Streamlit", "Web Technologies"],
-    categories: ["AI/ML", "Software Development"],
-    image: careerCoachImg,
   },
 ];
 
