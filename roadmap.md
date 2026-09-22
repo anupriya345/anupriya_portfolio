@@ -11,3 +11,4 @@
 - [x] Refresh categorized skills and navigation
 - [x] Add the uploaded résumé to prominent tracked download buttons in Hero and About
 - [x] Validate desktop, tablet, and mobile layouts and interactions
+- [ ] Remove the AI Career Coach project and update project totals
